@@ -1,0 +1,33 @@
+/* Diseño del footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+    background: rgb(183, 165, 170);
+    color: rgb(100, 87, 96);
+
+    padding: 60px 40px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 12px;
+}
+
+footer li:first-child {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(100, 87, 96);
+}

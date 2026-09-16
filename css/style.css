@@ -1,0 +1,73 @@
+/* Aqui edito toda la pagina */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #292522;
+}
+
+/* Edicion del main */
+
+main {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(241, 225, 221);
+
+    text-align: center;
+    gap: 30px;
+}
+
+main img {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+}
+
+main p {
+    max-width: 600px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Ajustando el hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    min-height: 70vh;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+
+    transform: translateX(-100px);
+}
+
+/* Diseño del text */
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-quote {
+    font-size: 50px;
+    line-height: 1.6;
+    color: rgb(116, 27, 71);
+    margin: 0;
+}
