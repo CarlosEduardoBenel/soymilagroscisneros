@@ -38,6 +38,8 @@ main p {
     font-size: 1.3rem;
     line-height: 1.6;
     font-style: italic;
+
+    cursor: default;
 }
 
 /* Ajustando el hero */

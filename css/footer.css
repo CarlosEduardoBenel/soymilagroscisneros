@@ -27,7 +27,16 @@ footer li:first-child {
     margin-bottom: 20px;
 }
 
+footer li h3 {
+    cursor: default;
+}
+
 footer a {
     text-decoration: none;
-    color: rgb(100, 87, 96);
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.6;
 }

@@ -7,3 +7,10 @@ window.addEventListener("scroll", () => {
         nav.classList.remove("scrolled");
     }
 });
+
+const desplegable = document.querySelector(".desplegable");
+const listMenu = document.querySelector(".lista-menu");
+
+desplegable.addEventListener("click", () => {
+    listMenu.classList.toggle("abierta");
+});
