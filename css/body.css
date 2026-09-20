@@ -1,0 +1,12 @@
+/* Aqui edito toda la pagina */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #292522;
+}
