@@ -1,0 +1,60 @@
+/* ===== Lista de terapias ===== */
+.seleccion-terapia {
+    padding: 60px 20px 80px;
+    background: var(--color-fondo, #faf6f0);
+}
+
+.seleccion-terapia h1 {
+    margin: 0 0 40px;
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.terapias-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.terapia-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background: #fff;
+    border: 1px solid rgb(223, 199, 187);
+    border-radius: 12px;
+
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.terapia-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: var(--color-fondo-suave, #efe6da); /* se ve mientras carga */
+}
+
+.terapia-card p {
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    font-family: var(--fuente-titulo, Georgia, serif);
+    font-size: 1.25rem;
+    color: var(--color-titulo, rgb(84, 64, 50));
+}
+
+.terapia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(85, 68, 79, 0.18);
+}
+
+.terapia-card:focus-visible {
+    outline: 3px solid rgba(100, 87, 96, 0.5);
+    outline-offset: 3px;
+}

@@ -1,0 +1,68 @@
+/* Tipografías: títulos elegantes + texto limpio y legible */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Nunito+Sans:wght@300;400;600&display=swap');
+
+/* Colores y fuentes del sitio (se cambian aquí una sola vez) */
+:root {
+    --color-fondo: #faf6f0;       /* crema */
+    --color-fondo-suave: #efe6da; /* beige */
+    --color-texto: #292522;
+    --color-titulo: #544032;      /* marrón */
+    --color-acento: #b07a5b;      /* terracota suave */
+    --color-oscuro: #1f1915;      /* marrón casi negro */
+    --color-claro: #ffffff;
+
+    --fuente-titulo: 'Cormorant Garamond', Georgia, serif;
+    --fuente-texto: 'Nunito Sans', system-ui, sans-serif;
+}
+
+/* Reset básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulo);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-titulo);
+}
+
+/* Imágenes que nunca se salen de la pantalla */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-acento);
+    transition: opacity 0.2s ease;
+}
+
+/* Contenedor reutilizable para centrar contenido de las páginas */
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Respeta a quien desactiva animaciones */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}

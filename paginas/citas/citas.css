@@ -1,5 +1,5 @@
 .registro {
-    background-image: url("../img/fondo-terapias.png");
+    background-image: url("/assets/img/fondos/fondo-terapias.png");
     background-size: cover;
     background-position: center;
 
@@ -101,4 +101,21 @@
 .registro textarea:focus {
     outline: none;
     border-color: rgb(100, 87, 96);
+}
+
+/* ===== Teléfono: código de país + número ===== */
+.registro .telefono {
+    display: flex;
+    gap: 10px;
+}
+
+.registro .telefono select {
+    flex: 0 0 140px;
+    width: auto;
+    padding: 0 10px;
+}
+
+.registro .telefono input {
+    flex: 1;
+    min-width: 0;
 }

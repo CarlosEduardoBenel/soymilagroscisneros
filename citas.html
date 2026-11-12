@@ -3,67 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="/componentes/global/global.css">
+    <link rel="stylesheet" href="/paginas/citas/citas.css">
     <title>Solicita tu cita</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <li>
-                <a href="https://soymilagroscisneros.com">soymilagroscisneros.com</a>
-            </li>
-            <li class="menu-paginas">
-
-                <div class="desplegable">
-                    <p>Página principal</p>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-
-                <div class="lista-menu">
-
-                    <div class="icono-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-
-                    <ul class="lista-paginas">
-                        <li><a href="#">Terapias</a></li>
-                        <li><a href="">Testimonio</a></li>
-                        <li><a href="citas.html">Citas</a></li>
-                    </ul>
-
-                </div>
-            
-            </li>
-        </ul>
-
-        <div class="retraible">
-            <h1>MILAGROS CISNEROS</h1>
-        </div>
-    </header>
+    <!-- Seccion Header -->
+    <div id="header"></div>
 
     <main>
         <section class="registro">
@@ -79,6 +25,7 @@
                         id="nombre" 
                         name="nombre" 
                         placeholder="Nombres y Apellidos"
+                        required autocomplete="name"
                     >
                 </div>
 
@@ -89,22 +36,43 @@
                         id="correo" 
                         name="correo" 
                         placeholder="Ej: milagros@example.com"
+                        required autocomplete="email"
                     >
                 </div>
 
                 <div class="datos-whatsapp">
                     <label for="whatsapp">WhatsApp</label>
-                    <input 
-                        type="tel" 
-                        id="whatsapp" 
-                        name="whatsapp" 
-                        placeholder="Número de WhatsApp"
-                    >
+
+                    <div class="telefono">
+                        <select id="codigo" name="codigo" aria-label="Código de país" required>
+                            <option value="+51">Perú +51</option>
+                            <option value="+52">México +52</option>
+                            <option value="+1" selected>EE. UU. / Canadá +1</option>
+                            <option value="+57">Colombia +57</option>
+                            <option value="+56">Chile +56</option>
+                            <option value="+54">Argentina +54</option>
+                            <option value="+593">Ecuador +593</option>
+                            <option value="+591">Bolivia +591</option>
+                            <option value="+58">Venezuela +58</option>
+                            <option value="+53">Cuba +53</option>
+                            <option value="+34">España +34</option>
+                        </select>
+
+                        <input
+                            type="tel"
+                            id="whatsapp"
+                            name="whatsapp"
+                            placeholder="Ej: 987654321"
+                            inputmode="numeric"
+                            autocomplete="tel-national"
+                            required
+                        >
+                    </div>
                 </div>
 
                 <div class="datos-terapia">
                     <label for="terapia">Terapia</label>
-                    <select name="terapia" id="terapia">
+                    <select name="terapia" id="terapia" required>
                         <option disabled selected value="">Selecciona tu terapia</option>
                         <option value="TE_SRC">Sesión Raíz Consciente</option>
                         <option value="TE_SPL">Sanación Pleyadiana</option>
@@ -138,63 +106,10 @@
         </section>
     </main>
 
-    <footer>
-        <ul>
-            <li><h3>SOBRE MÍ</h3></li>
-            <li><a href="sobre-mi.html">Quién soy</a></li>
-        </ul>
-
-        <ul>
-            <li><h3>CONTACTA ME</h3></li>
-
-            <li>
-                <a href="https://wa.me/13477692551" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                WhatsApp
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:milagrosterapiaholistica@gmail.com">
-                    Correo
-                </a>
-            </li>
-        </ul>
-
-        <ul>
-            <li><h3>SIGUEME</h3></li>
-
-            <li>
-                <a 
-                href="https://www.facebook.com/share/1GV8NLQYaV/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer">
-                Facebook
-                </a>
-            </li>
-
-            <li>
-                <a 
-                href="https://www.instagram.com/soymilagroscisneros?stkn=MXQxZ2E4cWkzaW02OQ%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer">
-                Instagram
-                </a>
-            </li>
-
-            <li>
-                <a 
-                href="https://www.tiktok.com/@mila_10_17?_r=1"
-                target="_blank"
-                rel="noopener noreferrer">
-                TikTok
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <!-- Seccion footer-->
+    <div id="footer"></div>
     
-    <script src="js/script.js"></script>
-    <script src="js/wasap.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/paginas/citas/citas.js"></script>
 </body>
 </html>

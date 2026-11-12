@@ -1,0 +1,225 @@
+/* ===== Detalle de una terapia ===== */
+.detalle-terapia {
+    padding: 50px 20px 80px;
+    background: var(--color-fondo, #faf6f0);
+}
+
+.detalle-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: var(--color-titulo, rgb(84, 64, 50));
+}
+
+.volver:hover {
+    opacity: 0.6;
+}
+
+.detalle-contenido {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 50px;
+    align-items: start;
+}
+
+.detalle-contenido img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--color-fondo-suave, #efe6da);
+}
+
+.detalle-texto h1 {
+    margin: 0 0 24px;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.detalle-texto p {
+    margin: 0 0 18px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.boton-cita {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 28px;
+
+    background: rgb(85, 68, 79);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.boton-cita:hover {
+    opacity: 0.9;
+}
+
+/* ===== Tablet y celular ===== */
+@media (max-width: 800px) {
+    .detalle-contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .detalle-contenido img {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+/* Necesario para que el atributo "hidden" funcione en elementos con display propio */
+[hidden] {
+    display: none !important;
+}
+
+/* ===== Datos rápidos (Online · 60 minutos...) ===== */
+.detalle-chips {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.detalle-chips li {
+    padding: 6px 14px;
+
+    background: var(--color-fondo-suave, #efe6da);
+    color: rgb(85, 68, 79);
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+}
+
+/* ===== Secciones (Qué trabajamos, Beneficios...) ===== */
+.bloque {
+    margin-top: 60px;
+    padding-top: 50px;
+    border-top: 1px solid rgb(223, 199, 187);
+}
+
+.bloque h2 {
+    margin: 0 0 32px;
+    text-align: center;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+/* Lista de frases sueltas */
+.lista-simple {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    gap: 14px;
+}
+
+.lista-simple li {
+    position: relative;
+    padding: 16px 20px 16px 52px;
+
+    background: #fff;
+    border: 1px solid rgb(223, 199, 187);
+    border-radius: 10px;
+
+    line-height: 1.7;
+}
+
+.lista-simple li::before {
+    content: "✦";
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    color: var(--color-acento, #b07a5b);
+}
+
+/* Tarjetas con título + texto */
+.tarjetas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tarjetas li {
+    padding: 24px;
+    background: #fff;
+    border: 1px solid rgb(223, 199, 187);
+    border-radius: 12px;
+}
+
+.tarjetas h3 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+}
+
+.tarjetas p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ===== Sección en texto corrido ===== */
+.bloque-texto {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 36px 32px;
+
+    background: var(--color-fondo-suave, #efe6da);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.bloque-texto p {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.bloque-texto p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+    .bloque-texto {
+        padding: 28px 20px;
+    }
+}
+
+/* ===== Texto antes y después de una lista ===== */
+.bloque-nota {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bloque-nota p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.bloque-nota p + p {
+    margin-top: 12px;
+}
+
+.bloque-intro {
+    margin-bottom: 32px;
+}
+
+.bloque-cierre {
+    margin-top: 32px;
+}

@@ -3,7 +3,8 @@
 .hero {
     width: 100%;
     margin: 0;
-    padding: 80px 40px 0;
+    --espacio: 40px;
+    padding: 80px var(--espacio) 0;
     box-sizing: border-box;
 
     display: grid;
@@ -50,8 +51,9 @@
 .hero-frase {
     grid-column: 1 / -1;
 
-    width: calc(100% + 80px);
-    margin-left: -40px;
+    width: calc(100% + var(--espacio) * 2);
+    margin-left: calc(var(--espacio) * -1);
+    padding: 100px var(--espacio) 130px;
 
     max-width: none;
 
@@ -117,10 +119,10 @@
 @media (max-width: 800px) {
     
     .hero {
+        --espacio: 25px;
         grid-template-columns: 1fr;
         gap: 40px;
-
-        padding: 60px 25px 90px;
+        padding: 60px var(--espacio) 0;
     }
 
     .hero-image {
@@ -138,8 +140,9 @@
 
     .hero-frase {
         order: 3;
-
         margin-top: 20px;
+        padding-top: 70px;
+        padding-bottom: 80px;
     }
 
     .historia {
@@ -153,7 +156,8 @@
 
 @media (max-width: 500px) {
     .hero {
-        padding: 45px 20px 70px;
+        --espacio: 20px;
+        padding: 45px var(--espacio) 0;
     }
 
     .hero-image img {
@@ -166,6 +170,8 @@
     }
 
     .hero-frase {
+        padding-top: 60px;
+        padding-bottom: 70px;
         font-size: 1.05rem;
         line-height: 1.7;
     }

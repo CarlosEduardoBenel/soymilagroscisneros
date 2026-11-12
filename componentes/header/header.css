@@ -1,0 +1,145 @@
+/* Reserva espacio solo mientras el header carga; después se ajusta solo */
+#header:empty {
+    min-height: 235px;
+}
+
+/* ===== Header ===== */
+header {
+    width: 100%;
+    background-image: url("/assets/img/fondos/bg-fondo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Barra superior fija */
+header > ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 20px 40px;
+
+    color: var(--color-texto, #292522);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header > ul.scrolled {
+    background-color: var(--color-oscuro, #000);
+    color: var(--color-claro, #fff);
+}
+
+header li {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+header a:hover {
+    opacity: 0.6;
+}
+
+/* ===== Desplegable ===== */
+.desplegable {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.desplegable:hover {
+    opacity: 0.7;
+}
+
+.desplegable p {
+    margin: 0;
+}
+
+.desplegable svg {
+    display: block;
+    stroke: currentColor;
+}
+
+/* ===== Menú de páginas ===== */
+.menu-paginas {
+    position: relative;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+}
+
+.lista-menu.abierta {
+    display: block;
+    background-color: var(--color-oscuro, #111);
+    color: var(--color-claro, #fff);
+    padding: 12px 0;
+}
+
+.lista-paginas {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 40px;
+}
+
+.lista-paginas li {
+    margin: 0;
+    padding: 8px 15px;
+}
+
+.lista-paginas a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.icono-menu {
+    position: absolute;
+    left: 30px;
+    top: 24px;
+}
+
+/* ===== Título (retraíble) ===== */
+.retraible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10px 70px;
+    cursor: default;
+}
+
+.retraible h1 {
+    margin: 0;
+    text-align: center;
+    font-family: var(--fuente-titulo, Georgia, serif);
+    font-weight: 400;
+    color: var(--color-titulo, rgb(84, 64, 50));
+    font-size: clamp(28px, 7vw, 55px);
+    letter-spacing: clamp(2px, 1vw, 5px);
+}
+
+/* ===== Celular ===== */
+@media (max-width: 600px) {
+    header > ul {
+        padding: 15px 20px;
+    }
+
+    .retraible {
+        padding: 90px 10px 50px;
+    }
+}

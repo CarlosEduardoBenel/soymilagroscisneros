@@ -3,176 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/form.css">
-    <title>Terapias</title>
+    <link rel="stylesheet" href="/componentes/global/global.css">
+    <link rel="stylesheet" href="/paginas/terapias/terapias.css">
+    <title>Selecciona tu terapia</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <li>
-                <a href="https://soymilagroscisneros.com">soymilagroscisneros.com</a>
-            </li>
-            <li class="menu-paginas">
+    <!-- Seccion header -->
+    <div id="header"></div>
 
-                <div class="desplegable">
-                    <p>Página principal</p>
+    <main class="seleccion-terapia">
+        <h1>Elige tu terapia</h1>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-
-                <div class="lista-menu">
-
-                    <div class="icono-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-
-                    <ul class="lista-paginas">
-                        <li><a href="terapias.html">Terapias</a></li>
-                        <li><a href="">Testimonio</a></li>
-                        <li><a href="citas.html">Citas</a></li>
-                    </ul>
-
-                </div>
-            
-            </li>
-        </ul>
-
-        <div class="retraible">
-            <h1>MILAGROS CISNEROS</h1>
+        <div class="terapias-grid">
+            <a class="terapia-card" href="/terapia.html?id=TE_SRC">
+                <img src="/assets/img/terapias/raiz-consciente.png" alt="" loading="lazy">
+                <p>Sesión Raíz Consciente</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_SPL">
+                <img src="/assets/img/terapias/sanacion-pleyadiana.png" alt="" loading="lazy">
+                <p>Sanación Pleyadiana</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_TAM">
+                <img src="/assets/img/terapias/tameana.png" alt="" loading="lazy">
+                <p>Tameana</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_AG">
+                <img src="/assets/img/terapias/arbol-genealogico.png" alt="" loading="lazy">
+                <p>Árbol Genealógico</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_LE">
+                <img src="/assets/img/terapias/liberacion-emociones.png" alt="" loading="lazy">
+                <p>Liberación de Emociones</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_RA">
+                <img src="/assets/img/terapias/registros-akashicos.png" alt="" loading="lazy">
+                <p>Registros Akáshicos</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_HE">
+                <img src="/assets/img/terapias/hipnosis-ericksoniana.png" alt="" loading="lazy">
+                <p>Hipnosis Ericksoniana</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_CA">
+                <img src="/assets/img/terapias/cirugia-astral.png" alt="" loading="lazy">
+                <p>Cirugía Astral</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_KI">
+                <img src="/assets/img/terapias/kepri-de-isis.png" alt="" loading="lazy">
+                <p>Kepri de Isis</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_LLA">
+                <img src="/assets/img/terapias/llave-ankh.png" alt="" loading="lazy">
+                <p>Limpieza con Llave Ankh</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_RE">
+                <img src="/assets/img/terapias/reiki.png" alt="" loading="lazy">
+                <p>Reiki</p>
+            </a>
+            <a class="terapia-card" href="/terapia.html?id=TE_AC">
+                <img src="/assets/img/terapias/access-consciousness.png" alt="" loading="lazy">
+                <p>Access Consciousness</p>
+            </a>
         </div>
-    </header>
+    </main>
 
-    <table class="Sublista-terapias">
-        <tr>
-            <td><img src="" alt="SesionRaizConsciente"></td>
-            <td>Sesión Raíz Consciente</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="SanacionPleyadiana"></td>
-            <td>Sanación Pleyadana</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="Tameana"></td>
-            <td>Tameana</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="ArbolGenealogico"></td>
-            <td>Árbol Genealógico</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="LiberacionDeEmociones"></td>
-            <td>Liberación de Emociones</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="RegistrosAkashicos"></td>
-            <td>Registros Akáshicos</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="HipnosEricksoniana"></td>
-            <td>Hipnos Ericksoniana</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="CirugiaAstral"></td>
-            <td>CirugiaAstral</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="KepriDeIsis"></td>
-            <td>Kepri de Isis</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="LimpiezaConLlaveAnkh"></td>
-            <td>Limpieza con Llave Ankh</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="Reiki"></td>
-            <td>Reiki</td>
-        </tr>
-        <tr>
-            <td><img src="" alt="AccessConciousness"></td>
-            <td>Access Conciousness</td>
-        </tr>
-        
-    </table>
-
-    <footer>
-        <ul>
-            <li><h3>SOBRE MÍ</h3></li>
-            <li><a href="sobre-mi.html">Quién soy</a></li>
-        </ul>
-
-        <ul>
-            <li><h3>CONTACTA ME</h3></li>
-
-            <li>
-                <a href="https://wa.me/13477692551" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                WhatsApp
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:milagrosterapiaholistica@gmail.com">
-                    Correo
-                </a>
-            </li>
-        </ul>
-
-        <ul>
-            <li><h3>SIGUEME</h3></li>
-
-            <li>
-                <a 
-                href="https://www.facebook.com/share/1GV8NLQYaV/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer">
-                Facebook
-                </a>
-            </li>
-
-            <li>
-                <a 
-                href="https://www.instagram.com/soymilagroscisneros?stkn=MXQxZ2E4cWkzaW02OQ%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer">
-                Instagram
-                </a>
-            </li>
-
-            <li>
-                <a 
-                href="https://www.tiktok.com/@mila_10_17?_r=1"
-                target="_blank"
-                rel="noopener noreferrer">
-                TikTok
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <!-- Seccion footer -->
+    <div id="footer"></div>
     
-    <script src="js/script.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

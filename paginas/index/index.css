@@ -1,0 +1,65 @@
+/* ===== Index: solo estilos de esta página ===== */
+
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(241, 225, 221);
+    text-align: center;
+}
+
+/* ===== Hero ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+
+    width: 100%;
+    max-width: 1100px;
+    min-height: 70vh;
+    padding: 60px 20px;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-quote {
+    margin: 0;
+    font-family: var(--fuente-titulo, Georgia, serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 50px);
+    line-height: 1.4;
+    color: rgb(116, 27, 71);
+    cursor: default;
+}
+
+/* ===== Tablet y celular ===== */
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px 60px;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 340px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+}
