@@ -6,10 +6,8 @@
             </li>
 
             <li class="menu-paginas">
-
-                <div class="desplegable">
-                    <p>Página principal</p>
-
+                <button type="button" class="desplegable" aria-expanded="false" aria-controls="lista-menu">
+                    <span>Menú</span>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
@@ -18,35 +16,18 @@
                         stroke="currentColor"
                         stroke-width="2"
                         stroke-linecap="round"
-                        stroke-linejoin="round">
+                        stroke-linejoin="round"
+                        aria-hidden="true">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
-                </div>
+                </button>
 
-                <div class="lista-menu">
-
-                    <div class="icono-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-
-                    <ul class="lista-paginas">
-                        <li><a href="/terapias.html">Terapias</a></li>
-                        <li><a href="#">Testimonio</a></li>
-                        <li><a href="/citas.html">Citas</a></li>
-                    </ul>
-
-                </div>
-
+                <ul class="lista-menu" id="lista-menu">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="/terapias.html">Terapias</a></li>
+                    <li><a href="/citas.html">Citas</a></li>
+                </ul>
             </li>
         </ul>
 

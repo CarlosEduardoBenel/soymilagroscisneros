@@ -51,67 +51,84 @@ header a:hover {
     opacity: 0.6;
 }
 
-/* ===== Desplegable ===== */
+/* ===== Botón del desplegable ===== */
 .desplegable {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    padding: 0;
+    border: none;
+    background: none;
+
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
     cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
 .desplegable:hover {
     opacity: 0.7;
 }
 
-.desplegable p {
-    margin: 0;
+.desplegable:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
 }
 
 .desplegable svg {
     display: block;
-    stroke: currentColor;
+    transition: transform 0.2s ease;
 }
 
-/* ===== Menú de páginas ===== */
-.menu-paginas {
-    position: relative;
+.desplegable[aria-expanded="true"] svg {
+    transform: rotate(180deg);
 }
 
+/* ===== Menú desplegable ===== */
 .lista-menu {
-    display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 12px);
     right: 0;
-    min-width: 180px;
+    min-width: 200px;
+
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+
+    background: var(--color-fondo, #faf6f0);
+    color: var(--color-texto, #292522);
+    border: 1px solid rgb(223, 199, 187);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(41, 37, 34, 0.18);
+
+    /* Cerrado: invisible, sin ocupar clics ni foco */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
 .lista-menu.abierta {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.lista-menu a {
     display: block;
-    background-color: var(--color-oscuro, #111);
-    color: var(--color-claro, #fff);
-    padding: 12px 0;
+    padding: 10px 14px;
+    border-radius: 6px;
 }
 
-.lista-paginas {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 0 40px;
+.lista-menu a:hover {
+    background: var(--color-fondo-suave, #efe6da);
+    opacity: 1;
 }
 
-.lista-paginas li {
-    margin: 0;
-    padding: 8px 15px;
-}
-
-.lista-paginas a {
-    display: block;
-    padding: 8px 15px;
-}
-
-.icono-menu {
-    position: absolute;
-    left: 30px;
-    top: 24px;
+.lista-menu a[aria-current="page"] {
+    font-weight: 600;
 }
 
 /* ===== Título (retraíble) ===== */
